@@ -1,4 +1,3 @@
-
 (() => {
   const html = document.documentElement;
   const themeButton = document.querySelector("[data-theme-toggle]");
@@ -10,7 +9,10 @@
   const updateThemeButton = () => {
     if (!themeButton) return;
     const isDark = html.dataset.theme === "dark";
-    themeButton.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    themeButton.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme",
+    );
     themeButton.innerHTML = isDark ? "☼" : "◐";
   };
   updateThemeButton();
@@ -24,11 +26,14 @@
   menuButton?.addEventListener("click", () => {
     const isOpen = nav?.classList.toggle("is-open") || false;
     menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation",
+    );
     menuButton.textContent = isOpen ? "×" : "☰";
   });
 
-  nav?.querySelectorAll("a").forEach(link => {
+  nav?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("is-open");
       menuButton?.setAttribute("aria-expanded", "false");
@@ -40,20 +45,25 @@
   });
 
   const revealItems = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealItems.forEach(item => observer.observe(item));
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+    revealItems.forEach((item) => observer.observe(item));
   } else {
-    revealItems.forEach(item => item.classList.add("is-visible"));
+    revealItems.forEach((item) => item.classList.add("is-visible"));
   }
-
 
   // Typewriter effect: erase the current role letter by letter, then type the next.
   const roleElement = document.querySelector("[data-changing-role]");
@@ -63,9 +73,11 @@
       "Laravel Developer",
       "Frontend Developer",
       "PHP Developer",
-      "Backend Developer"
+      "Backend Developer",
     ];
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (!reduceMotion) {
       let roleIndex = 0;
@@ -108,3 +120,17 @@
   const year = document.querySelector("[data-current-year]");
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add("hide");
+
+      setTimeout(() => {
+        preloader.remove();
+      }, 700);
+    }, 1500);
+  }
+});
