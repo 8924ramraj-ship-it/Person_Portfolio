@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omprakash-portfolio-1234om.vercel.app/sitemap.xml
