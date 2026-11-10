@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<rect width="800" height="1000" fill="#d9d3c6"/>
+<rect x="34" y="34" width="732" height="932" fill="none" stroke="#a9a394" stroke-width="2"/>
+<circle cx="400" cy="345" r="142" fill="#b7b09f"/>
+<path d="M155 900c18-206 112-318 245-318s227 112 245 318" fill="#8a9078"/>
+<path d="M267 335c8-115 67-186 151-186 91 0 147 74 151 186-42-49-91-71-151-71-57 0-107 22-151 71z" fill="#55594d"/>
+<text x="400" y="948" text-anchor="middle" fill="#53594b" font-family="Arial,sans-serif" font-size="18" letter-spacing="5">ADD YOUR PORTRAIT</text>
+</svg>

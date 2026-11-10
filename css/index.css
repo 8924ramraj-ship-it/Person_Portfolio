@@ -1,0 +1,174 @@
+/* Home page styles
+   Shared hero and layout styles are currently in common.css.
+   Add only home-specific changes here to keep the stylesheet simple.
+*/
+
+
+/* Home hero: personal introduction and rotating developer roles */
+.home-hero-title {
+  margin-bottom: 16px;
+}
+
+.hero-role-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 2rem;
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.changing-role {
+  display: inline-block;
+  color: var(--olive);
+  font-weight: 600;
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.changing-role.is-changing {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.resume-download {
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .hero-role-line {
+    font-size: 1rem;
+    min-height: 1.7rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-actions {
+    gap: 16px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .changing-role {
+    transition: none;
+  }
+}
+
+
+/* Home hero heading: smaller and with a clear size contrast */
+main .hero .home-hero-title {
+  font-size: clamp(2.85rem, 5.1vw, 4.55rem);
+  line-height: 1.04;
+  letter-spacing: -.01em;
+  margin-bottom: 14px;
+}
+
+main .hero .home-hero-title em {
+  display: inline-block;
+  font-size: .78em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.changing-role {
+  min-width: 0;
+  white-space: nowrap;
+  border-right: 1px solid currentColor;
+  padding-right: 3px;
+  animation: role-caret .8s steps(1, end) infinite;
+}
+
+@keyframes role-caret {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 700px) {
+  main .hero .home-hero-title {
+    font-size: clamp(2.45rem, 9vw, 3.5rem);
+    line-height: 1.06;
+  }
+
+  main .hero .home-hero-title em {
+    font-size: .8em;
+  }
+
+  .hero-role-line {
+    flex-wrap: wrap;
+  }
+
+  .changing-role {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .changing-role {
+    animation: none;
+    border-right: 0;
+  }
+}
+
+
+/* Home page spacing refinements */
+@media (min-width: 701px) {
+  .hero {
+    padding-top: 54px;
+    padding-bottom: 62px;
+  }
+
+  .hero-grid {
+    align-items: start;
+  }
+
+  .hero-copy {
+    padding-top: 28px;
+    padding-bottom: 0;
+  }
+}
+
+.home-project-cta {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 34px;
+}
+
+.home-project-cta .button-quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-strong);
+  font-size: .82rem;
+  font-weight: 600;
+  transition: color .2s ease, border-color .2s ease;
+  color: var(--olive);
+  border-color: var(--olive);
+}
+
+.home-project-cta .button-quiet:hover {
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 38px;
+    padding-bottom: 46px;
+  }
+
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .home-project-cta {
+    margin-top: 26px;
+  }
+}

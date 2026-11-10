@@ -1,0 +1,66 @@
+/* About page — editorial biography layout */
+.page-intro { padding: 76px 0 58px; border-bottom: 1px solid var(--line); }
+.page-intro-grid { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+.page-intro h1 {
+  margin: 12px 0 18px; max-width: 850px;
+  font-family: var(--serif); font-size: clamp(3.4rem, 7vw, 6.1rem);
+  font-weight: 500; line-height: .91; letter-spacing: -.055em;
+}
+.page-intro h1 em { color: var(--olive); }
+.page-intro .intro-lead { max-width: 680px; color: var(--ink-soft); font-size: 1.05rem; }
+.about-story { padding: 70px 0; border-bottom: 1px solid var(--line); }
+.story-grid { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 35px; }
+.story-copy { max-width: 760px; }
+.story-copy p { margin: 0 0 19px; color: var(--ink-soft); }
+.story-quote {
+  margin: 38px 0 0; padding: 23px 0 23px 28px;
+  border-left: 2px solid var(--clay); max-width: 650px;
+  font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.12; color: var(--ink);
+}
+.about-columns {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+  gap: clamp(35px, 7vw, 90px); padding: 70px 0; border-bottom: 1px solid var(--line);
+}
+.about-column h2 {
+  margin: 0 0 22px; font-family: var(--serif); font-size: 2.6rem;
+  font-weight: 500; letter-spacing: -.04em; line-height: 1;
+}
+.about-column p { color: var(--ink-soft); }
+.education-list { border-top: 1px solid var(--line-strong); }
+.education-item { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.education-item small { color: var(--olive); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; font-weight: 700; }
+.education-item h3 { margin: 4px 0 2px; font-family: var(--serif); font-size: 1.4rem; font-weight: 500; }
+.education-item p { margin: 0; color: var(--muted); font-size: .82rem; }
+.about-end { padding: 64px 0 76px; }
+.about-end-inner { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
+.about-end h2 { max-width: 650px; margin: 0; font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4.4rem); line-height: .95; font-weight: 500; letter-spacing: -.04em; }
+.about-end h2 em { color: var(--olive); }
+.about-end p { color: var(--ink-soft); max-width: 490px; }
+@media(max-width:700px) {
+  .page-intro { padding: 55px 0 42px; }
+  .page-intro-grid, .story-grid { grid-template-columns: 1fr; gap: 16px; }
+  .page-intro h1 { font-size: clamp(3.3rem, 16vw, 5rem); }
+  .about-story { padding: 54px 0; }
+  .about-columns { grid-template-columns: 1fr; gap: 38px; padding: 54px 0; }
+  .about-end { padding: 54px 0; }
+  .about-end-inner { display: block; }
+}
+
+
+/* Profile photo on the About page */
+.about-portrait {
+  max-width: 340px;
+  margin: 0 0 2rem;
+}
+.about-portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--paper-2);
+}
+.about-portrait figcaption {
+  margin-top: .65rem;
+  color: var(--muted);
+  font-size: .72rem;
+}

@@ -1,0 +1,195 @@
+/* -------------------------------------------------------
+   TYPOGRAPHY REFINEMENT
+   DM Serif Display is a regular-weight display face.
+   Avoid synthetic bold and tight tracking.
+-------------------------------------------------------- */
+
+main h1,
+main h2,
+main h3,
+main h4,
+main .story-quote,
+main .skill-note p {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+/* Hero headings: lighter, less compressed */
+main .hero h1,
+main .page-intro h1,
+main .projects-intro h1,
+main .skills-intro h1,
+main .journey-intro h1,
+main .contact-intro h1 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(3.1rem, 5.7vw, 5.1rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -.012em;
+  word-spacing: .015em;
+  font-synthesis: none;
+}
+
+/* Emphasized words should remain elegant, not heavier */
+main .hero h1 em,
+main .page-intro h1 em,
+main .projects-intro h1 em,
+main .skills-intro h1 em,
+main .journey-intro h1 em,
+main .contact-intro h1 em {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Section headings */
+main .section-title,
+main .about-column h2,
+main .contact-aside h2,
+main .skills-cta h2,
+main .project-next h2 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.9rem, 3.3vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.008em;
+}
+
+/* Body copy */
+main p,
+main li,
+main .hero-intro,
+main .intro-lead,
+main .projects-intro p,
+main .skills-intro p,
+main .journey-lede,
+main .contact-lede,
+main .contact-aside-copy {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: .94rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.72;
+}
+
+/* Card and sub-section headings */
+main .home-project-copy h3,
+main .project-equal-copy h3,
+main .skill-ledger-main h2,
+main .timeline-copy h2,
+main .case-detail h3,
+main .education-item h3 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Keep labels crisp without excessive weight */
+main .meta,
+main .small-label,
+main .section-index,
+main .eyebrow {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 700px) {
+  main .hero h1,
+  main .page-intro h1,
+  main .projects-intro h1,
+  main .skills-intro h1,
+  main .journey-intro h1,
+  main .contact-intro h1 {
+    font-size: clamp(2.55rem, 10vw, 3.65rem);
+    line-height: 1.06;
+    letter-spacing: -.008em;
+  }
+
+  main .section-title,
+  main .about-column h2,
+  main .contact-aside h2,
+  main .skills-cta h2,
+  main .project-next h2 {
+    font-size: clamp(1.75rem, 7vw, 2.35rem);
+    line-height: 1.14;
+  }
+
+  main p,
+  main li,
+  main .hero-intro,
+  main .intro-lead,
+  main .projects-intro p,
+  main .skills-intro p,
+  main .journey-lede,
+  main .contact-lede,
+  main .contact-aside-copy {
+    font-size: .9rem;
+    line-height: 1.68;
+  }
+
+  main .home-project-copy h3,
+  main .project-equal-copy h3,
+  main .skill-ledger-main h2,
+  main .timeline-copy h2,
+  main .case-detail h3,
+  main .education-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Secondary-page hero headings: reduce oversized display scale */
+main .page-intro h1,
+main .projects-intro h1,
+main .skills-intro h1,
+main .journey-intro h1,
+main .contact-intro h1 {
+  font-size: clamp(2.65rem, 4.35vw, 3.85rem);
+  line-height: 1.08;
+  letter-spacing: -.006em;
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  main .page-intro h1,
+  main .projects-intro h1,
+  main .skills-intro h1,
+  main .journey-intro h1,
+  main .contact-intro h1 {
+    font-size: clamp(2.2rem, 7.8vw, 2.95rem);
+    line-height: 1.1;
+  }
+}
+
+/* Projects page: scale down the "Three projects" section heading */
+.all-projects-heading h2 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 3.35vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.006em;
+}
+
+@media (max-width: 700px) {
+  .all-projects-heading h2 {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem);
+    line-height: 1.14;
+  }
+}
+
+/* Resume link deliberately inherits the same colour and typography as nav items */
+.primary-nav .nav-resume-link {
+  color: var(--ink-soft);
+  font-size: .9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.primary-nav .nav-resume-link:hover,
+.primary-nav .nav-resume-link[aria-current="page"] {
+  color: var(--ink);
+}

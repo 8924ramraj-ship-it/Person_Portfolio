@@ -1,0 +1,261 @@
+/* -------------------------------------------------------
+   JOURNEY PAGE — chronological editorial timeline
+-------------------------------------------------------- */
+.journey-intro {
+  padding-top: clamp(5.5rem, 11vw, 9rem);
+  padding-bottom: clamp(4rem, 8vw, 6.5rem);
+  max-width: 1120px;
+}
+.journey-intro h1 {
+  max-width: 850px;
+  margin: 1.2rem 0 1rem;
+  font-family: var(--serif);
+  font-size: clamp(4rem, 9vw, 8.2rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: .88;
+}
+.journey-intro h1 em,
+.journey-current h2 em {
+  color: var(--olive);
+  font-weight: 500;
+}
+.journey-lede {
+  max-width: 590px;
+  color: var(--muted, #777);
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.8;
+}
+.journey-timeline {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.timeline-heading {
+  display: grid;
+  grid-template-columns: minmax(180px, .72fr) 1.28fr;
+  gap: 2rem;
+  padding: 1.5rem 0 2.2rem;
+  border-top: 1px solid var(--line, #d8d5cb);
+}
+.timeline-heading p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted, #777);
+  line-height: 1.75;
+}
+.timeline-entry {
+  display: grid;
+  grid-template-columns: minmax(180px, .72fr) 34px 1.28fr;
+  gap: 2rem;
+  min-height: 205px;
+}
+.timeline-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .45rem;
+  padding-top: .35rem;
+  text-align: right;
+  font-size: .92rem;
+  font-weight: 600;
+}
+.timeline-date small {
+  color: var(--muted, #777);
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+.timeline-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.timeline-marker::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line, #d8d5cb);
+  content: "";
+}
+.timeline-marker i {
+  position: relative;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  margin-top: .45rem;
+  border: 1px solid var(--olive);
+  border-radius: 50%;
+  background: var(--surface, #f5f3ed);
+}
+.timeline-copy {
+  padding: 0 0 3rem;
+}
+.timeline-kicker {
+  margin: 0 0 .55rem;
+  color: var(--olive);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.timeline-copy h2 {
+  margin: 0 0 .35rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -.025em;
+  line-height: 1.05;
+}
+.timeline-copy > p:not(.timeline-kicker) {
+  margin: .35rem 0;
+  line-height: 1.65;
+}
+.timeline-detail {
+  max-width: 560px;
+  margin-top: .9rem !important;
+  color: var(--muted, #777);
+  font-size: .94rem;
+}
+.timeline-note {
+  display: inline-block;
+  margin-top: .7rem;
+  padding-bottom: .2rem;
+  border-bottom: 1px dashed var(--line, #d8d5cb);
+  color: var(--muted, #777);
+  font-size: .78rem;
+}
+.timeline-heading-work {
+  margin-top: .4rem;
+}
+.timeline-entry-last {
+  min-height: 170px;
+}
+.timeline-entry-last .timeline-marker::before {
+  bottom: 100%;
+}
+.journey-current {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: end;
+  gap: 1.5rem 3rem;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid var(--line, #d8d5cb);
+}
+.journey-current h2 {
+  margin: .7rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -.04em;
+  line-height: .98;
+}
+.journey-current > p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted, #777);
+  line-height: 1.8;
+}
+.journey-current .text-link {
+  grid-column: 2;
+  justify-self: start;
+}
+@media (max-width: 700px) {
+  .journey-intro { padding-top: 4.5rem; }
+  .timeline-heading {
+    grid-template-columns: 1fr;
+    gap: .8rem;
+  }
+  .timeline-entry {
+    grid-template-columns: 105px 22px minmax(0, 1fr);
+    gap: .8rem;
+    min-height: 0;
+  }
+  .timeline-date {
+    font-size: .76rem;
+  }
+  .timeline-date small {
+    font-size: .66rem;
+  }
+  .timeline-copy {
+    padding-bottom: 2.5rem;
+  }
+  .timeline-copy h2 {
+    font-size: 2rem;
+  }
+  .timeline-copy > p:not(.timeline-kicker) {
+    font-size: .9rem;
+  }
+  .journey-current {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .journey-current .text-link {
+    grid-column: 1;
+  }
+}
+@media (max-width: 390px) {
+  .timeline-entry {
+    grid-template-columns: 88px 18px minmax(0, 1fr);
+    gap: .55rem;
+  }
+  .timeline-date { font-size: .7rem; }
+  .timeline-copy h2 { font-size: 1.75rem; }
+}
+
+
+
+
+/* Journey + Contact layout corrections */
+.journey-page .journey-intro,
+.journey-page .journey-timeline,
+.journey-page .journey-current,
+.contact-page .contact-intro,
+.contact-page .contact-layout {
+  width: min(1160px, calc(100% - 56px));
+  margin-inline: auto;
+}
+.journey-page .journey-intro { max-width: 1160px; }
+.journey-page .timeline-entry {
+  grid-template-columns: minmax(150px, .72fr) 34px 1.28fr;
+}
+.journey-page .timeline-copy,
+.journey-page .timeline-heading p,
+.contact-page .contact-aside,
+.contact-page .contact-form {
+  min-width: 0;
+}
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+  display: block;
+  min-width: 0;
+  box-shadow: none;
+}
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+.contact-page .contact-submit {
+  border-radius: 0;
+}
+@media (max-width: 760px) {
+  .journey-page .journey-intro,
+  .journey-page .journey-timeline,
+  .journey-page .journey-current,
+  .contact-page .contact-intro,
+  .contact-page .contact-layout {
+    width: min(100% - 36px, 1160px);
+  }
+  .journey-page .timeline-entry {
+    grid-template-columns: minmax(82px, 105px) 20px minmax(0, 1fr);
+    gap: .7rem;
+  }
+}
+@media (max-width: 390px) {
+  .journey-page .timeline-entry {
+    grid-template-columns: 76px 16px minmax(0, 1fr);
+    gap: .45rem;
+  }
+}

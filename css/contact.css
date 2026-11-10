@@ -1,0 +1,209 @@
+/* -------------------------------------------------------
+   CONTACT PAGE — quiet, direct, editorial
+-------------------------------------------------------- */
+.contact-intro {
+  padding-top: clamp(5.5rem, 11vw, 9rem);
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+.contact-intro h1 {
+  margin: 1.2rem 0 1.1rem;
+  font-family: var(--serif);
+  font-size: clamp(4.3rem, 10vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -.06em;
+  line-height: .82;
+}
+.contact-intro h1 em {
+  color: var(--olive);
+  font-weight: 500;
+}
+.contact-lede {
+  max-width: 560px;
+  color: var(--muted, #777);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.8;
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 9vw, 9rem);
+  padding-top: 2.5rem;
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+  border-top: 1px solid var(--line, #d8d5cb);
+}
+.contact-aside h2 {
+  margin: 1rem 0;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4vw, 4.1rem);
+  font-weight: 500;
+  letter-spacing: -.04em;
+  line-height: .98;
+}
+.contact-aside-copy {
+  max-width: 390px;
+  color: var(--muted, #777);
+  line-height: 1.8;
+}
+.contact-detail {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line, #d8d5cb);
+}
+.detail-label {
+  color: var(--muted, #777);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.contact-detail p {
+  margin: .45rem 0 0;
+  line-height: 1.65;
+}
+.contact-placeholder-note {
+  max-width: 390px;
+  margin-top: 2.5rem;
+  color: var(--muted, #777);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line, #d8d5cb);
+}
+.form-index,
+.optional-label {
+  color: var(--muted, #777);
+  font-size: .72rem;
+  font-weight: 400;
+}
+.contact-form label {
+  margin: 1.45rem 0 .55rem;
+  font-size: .84rem;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .9rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--line, #d8d5cb);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+  resize: vertical;
+  transition: border-color .2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--olive);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted, #929087);
+  opacity: .8;
+}
+.contact-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--surface, #f5f3ed);
+  font: inherit;
+  font-size: .88rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.contact-submit:hover {
+  background: transparent;
+  color: var(--ink);
+}
+.form-disclaimer,
+.form-status {
+  color: var(--muted, #777);
+  font-size: .76rem;
+  line-height: 1.6;
+}
+.form-disclaimer { margin: .8rem 0 0; }
+.form-status { min-height: 1.3em; margin: .45rem 0 0; }
+.contact-form .field-error {
+  border-color: #a66a63;
+}
+@media (max-width: 760px) {
+  .contact-intro { padding-top: 4.5rem; }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-aside h2 { font-size: 3rem; }
+}
+
+
+
+
+/* Journey + Contact layout corrections */
+.journey-page .journey-intro,
+.journey-page .journey-timeline,
+.journey-page .journey-current,
+.contact-page .contact-intro,
+.contact-page .contact-layout {
+  width: min(1160px, calc(100% - 56px));
+  margin-inline: auto;
+}
+.journey-page .journey-intro { max-width: 1160px; }
+.journey-page .timeline-entry {
+  grid-template-columns: minmax(150px, .72fr) 34px 1.28fr;
+}
+.journey-page .timeline-copy,
+.journey-page .timeline-heading p,
+.contact-page .contact-aside,
+.contact-page .contact-form {
+  min-width: 0;
+}
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+  display: block;
+  min-width: 0;
+  box-shadow: none;
+}
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+.contact-page .contact-submit {
+  border-radius: 0;
+}
+@media (max-width: 760px) {
+  .journey-page .journey-intro,
+  .journey-page .journey-timeline,
+  .journey-page .journey-current,
+  .contact-page .contact-intro,
+  .contact-page .contact-layout {
+    width: min(100% - 36px, 1160px);
+  }
+  .journey-page .timeline-entry {
+    grid-template-columns: minmax(82px, 105px) 20px minmax(0, 1fr);
+    gap: .7rem;
+  }
+}
+@media (max-width: 390px) {
+  .journey-page .timeline-entry {
+    grid-template-columns: 76px 16px minmax(0, 1fr);
+    gap: .45rem;
+  }
+}

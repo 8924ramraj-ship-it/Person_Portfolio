@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#eef0f2"/>
+  <rect x="42" y="42" width="1116" height="676" rx="8" fill="#f7f7f5" stroke="#c7ced6" stroke-width="3" stroke-dasharray="12 10"/>
+  <g fill="none" stroke="#526b86" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="525" y="205" width="150" height="112" rx="8"/>
+    <path d="M545 285l38-40 25 25 22-20 25 35"/>
+    <circle cx="568" cy="230" r="9"/>
+  </g>
+  <text x="600" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#22252b">FindBack — Home page</text>
+  <text x="600" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#505966">Actual website screenshot goes here</text>
+  <text x="600" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#707985">Replace this placeholder with an actual FindBack website screenshot</text>
+</svg>
