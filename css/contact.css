@@ -207,3 +207,25 @@
     gap: .45rem;
   }
 }
+
+
+/* Contact layout fix */
+.contact-page .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.contact-page .contact-aside,
+.contact-page .contact-form {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+    .contact-page .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

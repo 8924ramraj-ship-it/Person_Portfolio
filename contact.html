@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
-<meta name="theme-color" content="#263746">
-<meta name="description" content="Get in touch with Omprakash Vishwakarma for collaboration and learning opportunities.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <meta name="theme-color" content="#263746">
+  <meta name="description"
+    content="Get in touch with Omprakash Vishwakarma for collaboration and learning opportunities.">
+  <meta name="author" content="Omprakash Vishwakarma">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Contact — Omprakash Vishwakarma">
+  <meta property="og:description"
+    content="Connect with Omprakash Vishwakarma for PHP development, internships and collaboration.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omprakash-portfolio-1234om.vercel.app/contact.html">
+
   <title>Contact — Omprakash Vishwakarma</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/contact.css">
   <script src="js/main.js" defer></script>
   <script src="js/contact.js" defer></script>
-  <link rel="stylesheet" href="css/typography.css">
 </head>
+
 <body id="top" class="contact-page">
   <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="wordmark" href="index.html" aria-label="Er. Omprakash Vishwakarma home">Er. Omprakash Vishwakarma<span>.</span></a>
-    <div class="nav-wrap" data-primary-nav>
-      <nav class="primary-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="journey.html">Journey</a><a href="contact.html" aria-current="page">Contact</a>
-      </nav>
-      
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html" aria-label="Er. Omprakash Vishwakarma home">Omprakash
+        Vishwakarma<span>.</span></a>
+      <div class="nav-wrap" data-primary-nav>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a
+            href="skills.html">Skills</a><a href="journey.html">Journey</a><a href="contact.html"
+            aria-current="page">Contact</a>
+        </nav>
+
+      </div>
+      <div class="header-tools"><button class="theme-toggle" type="button" data-theme-toggle
+          aria-label="Switch theme">◐</button></div>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation"
+        aria-expanded="false">☰</button>
     </div>
-    <div class="header-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button></div>
-    <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">☰</button>
-  </div>
-</header>
+  </header>
 
   <main>
     <section class="contact-intro page-shell reveal">
       <p class="eyebrow">A conversation starts here <span>— 06 / 06</span></p>
       <h1>Have something<br>in <em>mind?</em></h1>
-      <p class="contact-lede">I'm open to learning opportunities, collaboration and suitable projects. Send me a message to connect.</p>
+      <p class="contact-lede">I'm open to learning opportunities, collaboration and suitable projects. Send me a message
+        to connect.</p>
     </section>
 
     <section class="contact-layout page-shell">
@@ -55,7 +72,28 @@
           <span class="detail-label">Looking for</span>
           <p>Internships · Collaboration · Learning opportunities</p>
         </div>
-        <p class="contact-placeholder-note">Email and social profile links can be added once you share the correct details.</p>
+        <div class="contact-social-links">
+          <div class="contact-detail">
+            <p class="detail-label">Email me</p>
+            <a href="mailto:YOUR_EMAIL@gmail.com">
+              omvishwakarma631@gmail.com ↗
+            </a>
+          </div>
+
+          <div class="contact-detail">
+            <p class="detail-label">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/YOUR_PROFILE/" target="_blank" rel="noopener noreferrer">
+              Connect on LinkedIn ↗
+            </a>
+          </div>
+
+          <div class="contact-detail">
+            <p class="detail-label">GitHub</p>
+            <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
+              View GitHub Profile ↗
+            </a>
+          </div>
+        </div>
       </div>
 
       <form class="contact-form reveal" id="contactForm" novalidate>
@@ -64,50 +102,57 @@
           <span class="form-index">01 / 03</span>
         </div>
         <label for="contactName">Your name</label>
-        <input id="contactName" name="name" type="text" autocomplete="name" placeholder="How should I address you?" required>
+        <input id="contactName" name="name" type="text" maxlength="80" required>
         <label for="contactEmail">Email address</label>
-        <input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <input id="contactEmail" name="email" type="email" maxlength="254" required>
         <label for="contactSubject">What is this about? <span class="optional-label">Optional</span></label>
-        <input id="contactSubject" name="subject" type="text" placeholder="A project, an opportunity, a question…">
+        <input id="contactSubject" name="subject" type="text" maxlength="120">
         <label for="contactMessage">Your message</label>
-        <textarea id="contactMessage" name="message" rows="5" placeholder="A few details would be helpful…" required></textarea>
-        <button class="contact-submit" type="submit">Prepare message <span aria-hidden="true">↗</span></button>
-        <p class="form-disclaimer">This is a front-end form preview. It does not send or store messages yet.</p>
+        <textarea id="contactMessage" name="message" rows="5" maxlength="3000" required></textarea>
+        <button class="contact-submit" type="submit" id="submitBtn">
+          Send Message <span aria-hidden="true">↗</span>
+        </button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-main">
-      <div class="footer-brand-block">
-        <a aria-label="Omprakash Vishwakarma — back to homepage" class="footer-name" href="index.html">Omprakash<span>.</span></a>
-        <p class="footer-tagline">Building useful things for the web.</p>
-        <p class="footer-location">Based in Uttar Pradesh, India</p>
-      </div>
-      <div class="footer-note">
-        <span class="footer-label">A little about this space</span>
-        <p>A collection of my work, learning and progress in web development. Always open to meaningful conversations and opportunities.</p>
-        <a class="footer-contact-link" href="contact.html">Let’s connect <span aria-hidden="true">↗</span></a>
-      </div>
-      <nav class="footer-navigation" aria-label="Footer navigation">
-        <span class="footer-label">Explore</span>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="skills.html">Skills</a>
-          <a href="journey.html">Journey</a>
-          <a href="contact.html">Contact</a><a class="nav-resume-link" href="resume/Omprakash_Vishwakarma_Resume.pdf" download="Omprakash_Vishwakarma_Resume.pdf" aria-label="Download resume PDF">Download Resume</a>
+    <div class="wrap footer-inner">
+      <div class="footer-main">
+        <div class="footer-brand-block">
+          <a aria-label="Omprakash Vishwakarma — back to homepage" class="footer-name"
+            href="index.html">Omprakash<span>.</span></a>
+          <p class="footer-tagline">Building useful things for the web.</p>
+          <p class="footer-location">Based in Uttar Pradesh, India</p>
         </div>
-      </nav>
+        <div class="footer-note">
+          <span class="footer-label">A little about this space</span>
+          <p>A collection of my work, learning and progress in web development. Always open to meaningful conversations
+            and opportunities.</p>
+          <a class="footer-contact-link" href="contact.html">Let’s connect <span aria-hidden="true">↗</span></a>
+        </div>
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <span class="footer-label">Explore</span>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="journey.html">Journey</a>
+            <a href="contact.html">Contact</a><a class="nav-resume-link" href="resume/Omprakash_Vishwakarma_Resume.pdf"
+              download="Omprakash_Vishwakarma_Resume.pdf" aria-label="Download resume PDF">Download Resume</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-meta">© <span data-current-year>2026</span> Omprakash Vishwakarma. All rights
+          reserved.</span>
+        <a class="back-to-top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to
+          top ↑</a>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-meta">© <span data-current-year>2026</span> Omprakash Vishwakarma. All rights reserved.</span>
-      <a class="back-to-top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top ↑</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>
